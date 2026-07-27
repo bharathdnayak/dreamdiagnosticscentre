@@ -82,16 +82,16 @@ export default function Header() {
       <div className={`mobile-nav-overlay ${isOpen ? 'show' : ''}`} onClick={toggleMenu}></div>
       <nav className={`mobile-nav ${isOpen ? 'open' : ''}`}>
         <div className="mobile-nav-header">
-          <div className="logo-title">
-            <img src="/d.jpg" alt="Logo" style={{ height: '50px', marginRight: '10px' }} />
-            <h2 style={{ fontSize: '18px', fontWeight: 'bold' }}>Dream Diagnostics</h2>
+          <div className="mobile-logo-wrapper">
+            <img src="/d.jpg" alt="Logo" className="mobile-logo-img" />
+            <h2>Dream Diagnostics</h2>
           </div>
-          <div className="mobile-header-actions" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <div className="mobile-header-actions">
             <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+              {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
             </button>
-            <button className="close-btn" onClick={toggleMenu} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer' }}>
-              <X size={24} />
+            <button className="close-btn" onClick={toggleMenu} aria-label="Close navigation">
+              <X size={20} />
             </button>
           </div>
         </div>

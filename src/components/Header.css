@@ -318,20 +318,25 @@
   position: fixed;
   top: 0;
   right: -300px;
-  width: 280px;
+  width: 290px;
   height: 100vh;
-  /* Translucent frosted-glass iOS theme */
-  background: rgba(255, 255, 255, 0.88);
+  /* Premium deep royal blue frosted-glass panel matching the header */
+  background: rgba(0, 45, 90, 0.96);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  color: var(--text-dark);
-  box-shadow: -10px 0 40px rgba(0, 15, 30, 0.3);
+  color: #ffffff;
+  box-shadow: -10px 0 40px rgba(0, 15, 30, 0.5);
   z-index: 1001;
   display: flex;
   flex-direction: column;
   padding: 24px;
   transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .mobile-nav {
+  background: rgba(11, 19, 41, 0.98);
+  border-left-color: rgba(255, 255, 255, 0.15);
 }
 
 .mobile-nav.open {
@@ -342,51 +347,85 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding-bottom: 15px;
 }
 
+.mobile-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-logo-img {
+  height: 42px;
+  width: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-logo-wrapper h2 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff !important;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+
+.mobile-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .close-btn {
-  background: none;
-  border: none;
-  color: var(--text-medium);
-  cursor: pointer;
-  padding: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .close-btn:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
 }
 
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .mobile-link {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  color: var(--text-medium);
-  padding: 10px 16px;
-  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 12px 18px;
+  border-radius: 14px;
   transition: var(--transition-smooth);
   border: 1px solid transparent;
 }
 
 .mobile-link:hover {
-  background-color: rgba(0, 64, 128, 0.05);
-  color: var(--primary);
-  border-color: rgba(0, 64, 128, 0.1);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .mobile-link.active {
-  background-color: var(--primary);
+  background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
-  box-shadow: inset 0 8px 10px rgba(255, 255, 255, 0.15),
-              0 4px 10px rgba(0, 64, 128, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.15),
+              0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .mobile-book-btn {
@@ -397,8 +436,8 @@
   color: #ffffff;
   font-weight: 700;
   border-radius: 20px;
-  margin-top: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.3),
               0 6px 16px rgba(255, 85, 0, 0.3);
 }
