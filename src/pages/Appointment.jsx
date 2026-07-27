@@ -63,15 +63,16 @@ export default function Appointment() {
     setFormData(prev => ({ ...prev, ...updatedData }));
   }, [searchParams]);
 
-  // Generate slots helper
+  // Generate slots helper (12-hour AM/PM format)
   const generateTimeSlots = (startHour, endHour) => {
     let slots = [];
     for (let hour = startHour; hour < endHour; hour++) {
-      const start = new Date(0, 0, 0, hour, 0);
-      const end = new Date(0, 0, 0, hour + 1, 0);
-      const format = (d) => 
-        d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      slots.push(`${format(start)} - ${format(end)}`);
+      const formatTime = (h) => {
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        const formattedHour = h % 12 === 0 ? 12 : h % 12;
+        return `${formattedHour}:00 ${ampm}`;
+      };
+      slots.push(`${formatTime(hour)} - ${formatTime(hour + 1)}`);
     }
     return slots;
   };
