@@ -479,34 +479,72 @@
   }
   
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .main-header {
-    padding: 12px 0;
+    padding: 10px 0;
   }
-  .title-text h1 {
-    font-size: 16px;
+
+  .header-container {
+    padding: 0 12px;
   }
-  .title-text .subtitle {
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
-  .logo-title img {
-    height: 44px;
-  }
+
   .logo-title {
-    padding: 6px 14px 6px 8px;
+    padding: 5px 12px 5px 8px;
     border-radius: 14px;
+    gap: 8px;
   }
-  .logo-title::after {
-    left: 29px;
-    width: 44px;
-    height: 44px;
+
+  .logo-title img {
+    height: 38px;
   }
+
+  .title-text h1 {
+    font-size: 13.5px;
+    line-height: 1.25;
+  }
+
+  .title-text .subtitle {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
   .book-now-btn {
     display: none;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  /* Hide top bar theme toggle on mobile to prevent header congestion. Theme switch is prominently placed in the mobile menu drawer. */
+  .header-actions .theme-toggle-btn {
+    display: none;
+  }
+
+  .mobile-header-actions .theme-toggle-btn {
+    display: flex !important;
+    width: 36px;
+    height: 36px;
+  }
+
+  .main-header.scrolled .header-container {
+    width: calc(100% - 20px) !important;
+    padding: 6px 12px !important;
+  }
+
+  .main-header.scrolled .logo-title {
+    padding: 4px 10px 4px 6px;
+  }
+
+  .main-header.scrolled .logo-title img {
+    height: 34px;
   }
 }
