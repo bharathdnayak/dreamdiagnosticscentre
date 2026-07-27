@@ -40,8 +40,15 @@
   pointer-events: none;
 }
 
+.main-header.scrolled .header-container,
+.main-header.scrolled .mobile-toggle,
+.main-header.scrolled .theme-toggle-btn,
+.main-header.scrolled .nav-link,
+.main-header.scrolled .book-now-btn {
+  pointer-events: auto !important;
+}
+
 .main-header.scrolled .header-container {
-  pointer-events: auto;
   max-width: 1140px;
   width: calc(100% - 32px);
   padding: 8px 18px;
@@ -81,6 +88,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: auto !important;
 }
 
 .logo-title:hover {
@@ -341,7 +349,7 @@
 
 .mobile-nav-overlay.show {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: auto !important;
 }
 
 .mobile-nav {
@@ -362,6 +370,7 @@
   padding: 24px;
   transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: auto !important;
 }
 
 .dark-theme .mobile-nav {
@@ -371,6 +380,7 @@
 
 .mobile-nav.open {
   right: 0;
+  pointer-events: auto !important;
 }
 
 .mobile-nav-header {
@@ -421,6 +431,7 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  pointer-events: auto !important;
 }
 
 .close-btn:hover {
@@ -442,6 +453,8 @@
   border-radius: 14px;
   transition: var(--transition-smooth);
   border: 1px solid transparent;
+  pointer-events: auto !important;
+  cursor: pointer;
 }
 
 .mobile-link:hover {
@@ -470,6 +483,8 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.3),
               0 6px 16px rgba(255, 85, 0, 0.3);
+  pointer-events: auto !important;
+  cursor: pointer;
 }
 
 /* Media Queries */
