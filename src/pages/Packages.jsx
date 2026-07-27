@@ -241,7 +241,7 @@ export default function Packages() {
       {/* View Details Modal */}
       {selectedModalPkg && (
         <div className="modal-overlay animate-fade" onClick={() => setSelectedModalPkg(null)}>
-          <div className="details-modal glass-card animate-scale" onClick={(e) => e.stopPropagation()}>
+          <div className="details-modal animate-scale" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setSelectedModalPkg(null)} aria-label="Close modal">
               <X size={20} />
             </button>
