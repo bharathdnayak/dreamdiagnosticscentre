@@ -1,0 +1,322 @@
+/* About Page Stylesheet */
+
+.about-hero {
+  background: linear-gradient(135deg, #002d5a 0%, #004080 50%, #0059b3 100%);
+  color: var(--bg-white);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.about-hero-sub {
+  font-size: 16px;
+  color: #93c5fd;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Intro Section */
+.about-intro-section {
+  padding: 80px 20px;
+}
+
+.about-intro-card {
+  background: var(--bg-white);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-intro-text {
+  flex: 1.2;
+}
+
+.about-intro-text h2 {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-intro-text p {
+  font-size: 16px;
+  color: var(--text-medium);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.about-intro-image {
+  flex: 0.8;
+  box-shadow: var(--shadow-lg);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-intro-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: url(#liquid-refraction);
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+  background-color: var(--primary-light);
+  padding: 80px 20px;
+}
+
+.mission-vision-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.mv-card {
+  background-color: var(--bg-white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.mv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.mv-icon-container {
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px auto;
+}
+
+.mv-card h3 {
+  font-size: 22px;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.mv-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-medium);
+}
+
+/* Core Values Section */
+.values-section {
+  padding: 80px 20px;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+.section-header-center h2 {
+  font-size: 32px;
+  color: var(--primary-dark);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.section-header-center p {
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background-color: var(--bg-white);
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--primary);
+  transition: var(--transition-smooth);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-top-color: var(--accent);
+}
+
+.value-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: var(--transition-smooth);
+}
+
+.value-card:hover .value-icon-box {
+  background-color: rgba(255, 102, 0, 0.1);
+}
+
+.value-icon-svg {
+  color: var(--primary);
+  width: 24px;
+  height: 24px;
+  transition: var(--transition-smooth);
+}
+
+.value-card:hover .value-icon-svg {
+  color: var(--accent);
+}
+
+.value-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-medium);
+}
+
+/* --- Laboratory Technology Showcase --- */
+.tech-showcase-section {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tech-card {
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tech-badge-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tech-badge-tag.bio {
+  background: rgba(0, 102, 204, 0.08);
+  color: #0066cc;
+}
+
+.tech-badge-tag.hem {
+  background: rgba(255, 85, 0, 0.08);
+  color: #ff5500;
+}
+
+.tech-badge-tag.imm {
+  background: rgba(153, 51, 204, 0.08);
+  color: #9933cc;
+}
+
+.tech-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.tech-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-medium);
+}
+
+/* Responsive Queries */
+@media (max-width: 992px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .about-intro-card {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+  .about-intro-image {
+    order: -1;
+    width: 100%;
+    max-width: 500px;
+  }
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero {
+    padding: 60px 15px;
+  }
+  .about-hero h1 {
+    font-size: 28px;
+  }
+  .about-intro-section {
+    padding: 40px 15px;
+  }
+  .about-intro-text h2 {
+    font-size: 22px;
+  }
+  .about-intro-text p {
+    font-size: 15px;
+  }
+  .mission-vision-section {
+    padding: 50px 15px;
+  }
+  .mv-card {
+    padding: 24px;
+  }
+  .values-section {
+    padding: 50px 15px;
+  }
+  .section-header-center h2 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,204 @@
+/* Services Page Stylesheet */
+
+.services-hero {
+  background: linear-gradient(135deg, #002d5a 0%, #004080 50%, #0059b3 100%);
+  color: var(--bg-white);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-hero h1 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.services-hero-sub {
+  font-size: 16px;
+  color: #93c5fd;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid Section */
+.services-grid-section {
+  padding: 80px 20px;
+}
+
+.services-header-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+.services-header-intro h2 {
+  font-size: 32px;
+  color: var(--primary-dark);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.services-header-intro p {
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--bg-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #edf2f7;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+/* Offset animation delays to make floating look natural */
+.services-grid .service-card:nth-child(even) {
+  animation-delay: 1.5s;
+}
+.services-grid .service-card:nth-child(3n) {
+  animation-delay: 3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  animation-play-state: paused; /* stop bounce on hover */
+}
+
+.service-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: url(#liquid-refraction);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-info {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.service-info p {
+  font-size: 14px;
+  color: var(--text-medium);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.service-book-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Float Card Animation */
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Diagnostics Features */
+.diagnostics-features {
+  padding: 0 20px 80px 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  background-color: var(--bg-white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--primary);
+}
+
+.feature-item {
+  text-align: center;
+  padding: 10px;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.feature-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* Responsive Queries */
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 60px 15px;
+  }
+  .services-hero h1 {
+    font-size: 28px;
+  }
+  .services-grid-section {
+    padding: 50px 15px;
+  }
+  .services-header-intro h2 {
+    font-size: 26px;
+  }
+  .diagnostics-features {
+    padding: 0 15px 50px 15px;
+  }
+  .features-grid {
+    padding: 30px 20px;
+  }
+  .service-card {
+    max-width: 380px;
+    margin: 0 auto;
+    animation: none; /* Disable float animation on mobile for better performance and usability */
+  }
+  .service-card:hover {
+    transform: none;
+  }
+}

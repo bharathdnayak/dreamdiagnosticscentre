@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dreamdiagnosticscentre.netlify.app/sitemap.xml

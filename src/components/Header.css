@@ -1,0 +1,443 @@
+/* Aqua UI Header Stylesheet */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Vibrant Royal Blue translucent frosted glass bar */
+  background: rgba(0, 64, 128, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #ffffff;
+  padding: 16px 0;
+  z-index: 999;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2),
+              inset 0 15px 15px rgba(255, 255, 255, 0.05),
+              0 8px 30px rgba(0, 0, 0, 0.25);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
+  transition: padding 0.5s cubic-bezier(0.19, 1, 0.22, 1), 
+              background-color 0.5s ease;
+}
+
+.main-header.scrolled {
+  padding: 8px 0;
+  background: rgba(0, 51, 102, 0.9);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15),
+              0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Polished Gel Sub-Panel around Logo & Title */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 24px 10px 14px;
+  border-radius: 20px;
+  box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.1),
+              inset 0 -5px 10px rgba(0, 0, 0, 0.2),
+              0 4px 15px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.logo-title:hover {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: inset 0 10px 15px rgba(255, 255, 255, 0.15),
+              0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+/* Gel panel glossy sheen overlay */
+.logo-title::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+/* Logo image */
+.logo-title img {
+  height: 56px;
+  width: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 2;
+  position: relative;
+  transition: height 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.main-header.scrolled .logo-title {
+  padding: 6px 18px 6px 10px;
+  border-radius: 14px;
+}
+
+.main-header.scrolled .logo-title img {
+  height: 42px;
+}
+
+/* Vertical Ripple behind the Logo image */
+.logo-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 42px; /* Center of the logo */
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid rgba(147, 197, 253, 0.45);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  animation: logoRipple 5s infinite cubic-bezier(0.1, 0.8, 0.3, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.main-header.scrolled .logo-title::after {
+  left: 31px;
+}
+
+@keyframes logoRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Logo Title Text */
+.title-text {
+  z-index: 2;
+}
+
+.title-text h1 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  transition: font-size 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.main-header.scrolled .title-text h1 {
+  font-size: 16px;
+}
+
+.title-text .subtitle {
+  font-size: 10px;
+  color: #93c5fd;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Desktop Nav Links */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0);
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.18),
+              inset 0 -2px 3px rgba(0, 0, 0, 0.1),
+              0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+/* Polymer-Gel Droplet Button */
+.book-now-btn {
+  display: inline-block;
+  padding: 11px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  /* Glossy orange polymer gel gradient */
+  background: linear-gradient(180deg, #ff8c1a 0%, #ff5500 50%, #cc3300 100%);
+  border-radius: 30px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.35),
+              inset 0 -5px 8px rgba(0, 0, 0, 0.25),
+              0 6px 16px rgba(255, 85, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Shiny specular light dot inside gel button */
+.book-now-btn::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 14px;
+  width: 8px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* iOS squishy liquid jelly animation on hover */
+.book-now-btn:hover {
+  animation: jellyStretch 0.65s ease;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.45),
+              0 8px 22px rgba(255, 85, 0, 0.5),
+              0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes jellyStretch {
+  0% { transform: scale(1, 1); }
+  30% { transform: scale(1.15, 0.8); }
+  40% { transform: scale(0.85, 1.15); }
+  50% { transform: scale(1.08, 0.9); }
+  65% { transform: scale(0.96, 1.04); }
+  75% { transform: scale(1.03, 0.97); }
+  100% { transform: scale(1, 1); }
+}
+
+.book-now-btn:active {
+  transform: scale(0.94);
+}
+
+/* Mobile styles */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.mobile-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2),
+              0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.65) !important;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2),
+              0 0 10px rgba(255, 255, 255, 0.25);
+  transform: rotate(15deg) scale(1.05);
+}
+
+.theme-toggle-btn svg {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.theme-toggle-btn:hover svg {
+  transform: rotate(45deg);
+}
+
+/* Mobile Nav Drawer styling */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 15, 30, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-nav-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 280px;
+  height: 100vh;
+  /* Translucent frosted-glass iOS theme */
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  color: var(--text-dark);
+  box-shadow: -10px 0 40px rgba(0, 15, 30, 0.3);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 15px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--text-medium);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-medium);
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+  border: 1px solid transparent;
+}
+
+.mobile-link:hover {
+  background-color: rgba(0, 64, 128, 0.05);
+  color: var(--primary);
+  border-color: rgba(0, 64, 128, 0.1);
+}
+
+.mobile-link.active {
+  background-color: var(--primary);
+  color: #ffffff;
+  box-shadow: inset 0 8px 10px rgba(255, 255, 255, 0.15),
+              0 4px 10px rgba(0, 64, 128, 0.2);
+}
+
+.mobile-book-btn {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  background: linear-gradient(180deg, #ff8c1a 0%, #ff5500 50%, #cc3300 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.3),
+              0 6px 16px rgba(255, 85, 0, 0.3);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-header {
+    padding: 12px 0;
+  }
+  .title-text h1 {
+    font-size: 16px;
+  }
+  .title-text .subtitle {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  .logo-title img {
+    height: 44px;
+  }
+  .logo-title {
+    padding: 6px 14px 6px 8px;
+    border-radius: 14px;
+  }
+  .logo-title::after {
+    left: 29px;
+    width: 44px;
+    height: 44px;
+  }
+  .book-now-btn {
+    display: none;
+  }
+}

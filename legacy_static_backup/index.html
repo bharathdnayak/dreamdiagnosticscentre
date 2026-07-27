@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="k9Y-gOiTDTx-9MCI7zMsh5HVzFbZv7WKSpqZLcMRhgs" />
+
+  <title>Dream Diagnostics Center | Karkala</title>
+  <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dreamdiagnosticscentre.netlify.app/">
+
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Meta -->
+  <meta name="description" content="Dream Diagnostics Center offers advanced lab testing, health packages, ECG, TMT, X‑ray, and more in Karkala. Your health, our priority.">
+  <meta name="keywords"    content="diagnostic center, dream diagnostics, Karkala lab tests, health checkup, blood test, ECG, TMT, X‑ray">
+  <meta name="author"      content="Dream Diagnostics Centre">
+  <meta name="robots"      content="index, follow">
+
+  <!-- Social preview -->
+  <meta property="og:title"       content="Dream Diagnostic Centre | Karkala">
+  <meta property="og:description" content="Trusted diagnostic center in Karkala offering affordable lab testing, health packages, ECG, TMT, and more.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://dreamdiagnosticscentre.netlify.app">
+  <meta property="og:image"       content="https://dreamdiagnosticscentre.netlify.app/d.jpg">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:title"      content="Dream Diagnostics Centre | Karkala">
+  <meta name="twitter:description"content="Trusted diagnostic center in Karkala with modern lab testing and wellness packages.">
+  <meta name="twitter:image"      content="https://dreamdiagnosticscentre.netlify.app/d.jpg">
+
+  <link rel="canonical" href="https://dreamdiagnosticscentre.netlify.app/">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Inline critical CSS -->
+  <style>
+    /* --- basic layout --- */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f4f4f4}
+
+    /* gradient header + sticky */
+    header{background:linear-gradient(90deg,#003366 0%,#004080 50%,#0059b3 100%);color:#fff;padding:15px 20px;display:flex;flex-wrap:wrap;align-items:center;position:sticky;top:0;z-index:999;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+    .logo-title{display:flex;align-items:center}
+    .logo-title img{height:90px;margin-right:15px}
+    .logo-title h1{font-size:28px;white-space:nowrap}
+
+    nav{display:flex;flex-wrap:wrap;gap:12px;margin-left:auto;margin-right:20px}
+    nav a{color:#fff;text-decoration:none;font-weight:bold;font-size:16px;position:relative;padding-bottom:4px}
+    nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:#ff6600;transition:.4s}
+    nav a:hover::after{width:100%}
+
+    /* --- prominent BOOK NOW button in header --- */
+    .book-now{display:inline-block;padding:12px 26px;font-size:18px;border-radius:8px;font-weight:bold;color:#fff;background:#ff6600;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.25);animation:pulse 2s infinite ease-in-out;transition:transform .3s,box-shadow .3s}
+    .book-now:hover{transform:scale(1.05);box-shadow:0 6px 15px rgba(0,0,0,.35)}
+
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+
+    /* --- slider --- */
+    .slider-section{position:relative;overflow:hidden;width:100%;max-height:550px;margin-bottom:40px}
+    .carousel{position:relative}
+    .slide{display:none;position:relative;width:100%}
+    .slide img{width:100%;height:550px;object-fit:cover;filter:brightness(60%)}
+    .slide.active{display:block;animation:fade 1s ease}
+    .slide-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:90%;text-align:center;color:#fff}
+    .slide-content h2{font-size:36px;margin-bottom:10px;text-shadow:2px 2px 8px #000}
+    .slide-content p {font-size:18px;margin-bottom:20px;text-shadow:1px 1px 6px #000}
+    @keyframes fade{from{opacity:.4}to{opacity:1}}
+
+    /* --- hero (kept for banner message) --- */
+    #hero{background:#e6f0ff;text-align:center;padding:80px 20px}
+    #hero h2{font-size:36px;color:#004080;margin-bottom:20px}
+
+    /* --- About Us parallax section --- */
+    #about{position:relative;background:url('about-bg.jpg') center/cover fixed;color:#fff;text-align:center;padding:120px 20px}
+    #about::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);z-index:0}
+    .about-content{position:relative;max-width:800px;margin:auto;z-index:1}
+    #about h2{font-size:38px;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase}
+    #about p{font-size:18px;line-height:1.7}
+
+    /* --- footer --- */
+    footer{background:#000;color:#fff;text-align:center;padding:40px 20px;margin-top:40px}
+    footer a{color:#fff;text-decoration:none}
+    footer img{height:80px;margin-bottom:15px}
+
+    /* arrows in slider */
+    .prev,.next{cursor:pointer;position:absolute;top:50%;padding:16px;color:#fff;font-weight:bold;font-size:32px;transition:.3s ease;user-select:none;z-index:100}
+    .prev{left:20px;transform:translateY(-50%)}
+    .next{right:20px;transform:translateY(-50%)}
+    .prev:hover,.next:hover{color:#ff6600}
+
+    /* Responsive tweaks */
+    @media(max-width:768px){
+      .logo-title img{height:60px}
+      .logo-title h1{font-size:22px}
+      nav a{font-size:14px}
+      .book-now{padding:10px 20px;font-size:16px}
+      .slide-content h2{font-size:28px}
+      .slide-content p{font-size:16px}
+    }
+    /* --- About Us Parallax Section --- */
+#about-us {
+  position: relative;
+  background-image: url('1.jpg'); /* use 2.jpg if you prefer */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#about-us::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+#about-us h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(255, 100, 100, 0.9);
+  animation: glow 3s infinite alternate;
+}
+
+#about-us p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.7;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes glow {
+  0%   { text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d; }
+  100% { text-shadow: 0 0 20px #ff1a1a, 0 0 40px #ff1a1a; }
+}
+/* ===== Packages Spotlight ===== */
+#packages-spotlight{
+  --grad1:#003366;            /* existing gradient start  */
+  --grad2:#0059b3;            /* existing gradient end    */
+  --accent:#ff6600;           /* existing orange accent   */
+
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  margin:60px auto;
+  padding:60px 40px;
+  border-radius:20px;
+  background:linear-gradient(135deg,var(--grad1) 0%,var(--grad2) 100%);
+  color:#fff;
+  overflow:hidden;
+  position:relative;
+  isolation:isolate;          /* make pseudo below sit under text */
+}
+
+/* decorative angled slice to echo the screenshot */
+#packages-spotlight::before{
+  content:"";
+  position:absolute;inset:0;
+  background:rgba(255,255,255,.08);
+  clip-path:polygon(65% 0,100% 0,100% 100%,85% 100%);
+  z-index:-1;
+}
+
+/* left block */
+.spotlight-text{
+  flex:1 1 350px;
+  animation:slideIn 1.1s ease 0s both;
+}
+#packages-spotlight h2{
+  font-size:clamp(28px,2.4vw+10px,38px);
+  margin-bottom:18px;
+  color:#d7c0ff;              /* light lavender to pop */
+}
+#packages-spotlight p{
+  font-size:clamp(16px,1.1vw+8px,20px);
+  line-height:1.6;
+  margin-bottom:32px;
+  max-width:550px;
+}
+#packages-spotlight small{
+  display:block;
+  margin-top:28px;
+  opacity:.85;
+  font-size:14px;
+}
+
+/* CTA button */
+.spotlight-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--accent);
+  color:#fff;
+  padding:14px 30px;
+  font-size:18px;
+  font-weight:bold;
+  border:none;
+  border-radius:40px 40px 40px 10px;
+  text-decoration:none;
+  box-shadow:0 6px 15px rgba(0,0,0,.25);
+  position:relative;
+  overflow:hidden;
+  transition:transform .35s cubic-bezier(.19,1,.22,1);
+}
+.spotlight-btn:hover{transform:translateY(-3px) scale(1.04);}
+.spotlight-btn .arrow{
+  display:inline-block;
+  transform:translateX(0);
+  transition:transform .35s cubic-bezier(.19,1,.22,1);
+}
+.spotlight-btn:hover .arrow{transform:translateX(4px);}
+
+/* right‑hand circular image */
+.spotlight-image{
+  flex:0 1 360px;
+  max-width:420px;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  background:#fff0;
+  position:relative;
+  animation:fadeZoom 1.3s ease 0.3s both;
+}
+.spotlight-image img{
+  width:100%;height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  filter:grayscale(20%) contrast(105%) brightness(105%);
+  box-shadow:0 0 0 8px rgba(255,255,255,.15);
+}
+
+/* ---------- Animations ---------- */
+@keyframes slideIn{
+  from{transform:translateX(-50px);opacity:0}to{transform:none;opacity:1}
+}
+@keyframes fadeZoom{
+  from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media(max-width:768px){
+  #packages-spotlight{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 20px;
+  }
+  .spotlight-image{order:-1;margin-bottom:30px;}
+  .spotlight-btn{justify-content:center;}
+}
+#google-reviews {
+  background: #e6f7ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#google-reviews h2 {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.review-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.review-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px 24px 26px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  text-align: left;
+  transition: transform 0.35s ease;
+}
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.review-card header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.placeholder-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ccc;
+  color: #444;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.review-card h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #003366;
+}
+.review-card time {
+  font-size: 12px;
+  color: #666;
+}
+
+.review-card p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #333;
+}
+.review-card .stars {
+  font-size: 18px;
+  color: #ff6600;
+  margin-top: 12px;
+  letter-spacing: 1px;
+}
+
+.review-cta {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 46px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+.review-cta:hover {
+  background: #e65c00;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .review-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.review-card {
+  position: relative;
+  z-index: 10;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header>
+    <div class="logo-title">
+      <img src="d.jpg" alt="Dream Diagnostics Logo">
+      <h1>Dream Diagnostic Centre</h1>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a> <!-- anchor scroll to about section -->
+      <a href="packages.html">Health Packages</a>
+      <a href="services.html">Our Services</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Prominent BOOK NOW / APPOINTMENT button -->
+    <a href="appointment.html" class="book-now">Book&nbsp;Now</a>
+  </header>
+
+  <!-- ============================ SLIDER ============================ -->
+  <section class="slider-section">
+    <div class="carousel">
+      <!-- Slides -->
+      <div class="slide active">
+        <img src="slides1.jpg" alt="Lab technology">
+        <div class="slide-content">
+          <h2>Modern Lab Technology</h2>
+          <p>Equipped with high‑end diagnostic machines for accurate results.</p>
+          <a href="about.html" class="btn">Know More</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="slides2.jpg" alt="Health Packages">
+        <div class="slide-content">
+          <h2>Complete Health Packages</h2>
+          <p>Affordable packages tailored for your regular health check‑ups.</p>
+          <a href="packages.html" class="btn">Explore Packages</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="slides3.jpg" alt="Contact Us">
+        <div class="slide-content">
+          <h2>Contact Our Team</h2>
+          <p>Have questions? Our health consultants are ready to help.</p>
+          <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="4.jpg" alt="Visit Us">
+        <div class="slide-content">
+          <h2>Visit Our Center</h2>
+          <p>Karkala Inn — your nearby health partner.</p>
+          <a href="https://maps.app.goo.gl/zRBn12DHpbANyAAa7" class="btn" target="_blank" rel="noopener">Find Us</a>
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+      <span class="next" onclick="changeSlide(1)">&#10095;</span>
+    </div>
+  </section>
+
+
+  <!-- ============================ HERO ============================ -->
+  <section id="hero">
+    <h2>Your Health, Our Priority</h2>
+    <a href="appointment.html" class="btn">Book Appointment</a>
+  </section>
+
+
+  <!-- ============================ ABOUT US ============================ -->
+<section id="about-us">
+  <h2>About Dream Diagnostic Centre</h2>
+  <p>
+    At Dream Diagnostic Centre, we’re redefining diagnostic care with accuracy, speed, and compassion. Our expert team and advanced technology ensure you get trusted results—because your health deserves nothing less.
+  </p>
+</section>
+
+<!-- ============================ PACKAGES SPOTLIGHT ============================ -->
+<section id="packages-spotlight">
+  <div class="spotlight-text">
+    <h2>Complete Health&nbsp;Packages*</h2>
+
+    
+    <a href="packages.html" class="spotlight-btn">
+      View&nbsp;Packages
+      <span class="arrow">➜</span>
+    </a>
+
+  </div>
+
+  <div class="spotlight-image">
+    <!-- 2.jpg should be 1:1 or 4:3; crop square for best circle -->
+    <img src="change.jpg" alt="Happy couple enjoying good health">
+  </div>
+</section>
+<section id="google-reviews">
+  <h2>What Customers Are Saying</h2>
+  <div class="review-wrapper">
+    
+    <!-- Prajna Acharya -->
+    <div class="review-card">
+      <header>
+        <div class="placeholder-img">P</div>
+        <div>
+          <h4 style="color: white;">Prajna Acharya</h4>
+          <time>1 month ago</time>
+        </div>
+      </header>
+      <p>
+        The staffs were incredibly helpful and patient, making my experience very comfortable. The tests performed quickly and efficiently, and the results were also accurate. Overall the facility was clean and well maintained which made me feel safe and secure.
+      </p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <!-- Narasimha Murthy -->
+    <div class="review-card">
+      <header>
+        <div class="placeholder-img">N</div>
+        <div>
+          <h4 style="color: white;">Narasimha Murthy</h4>
+          <time>1 month ago</time>
+        </div>
+      </header>
+      <p>
+        Best Lab for getting tests done. Having the best automated analysers for Biochemistry and Haematology, timely calibrations and well qualified personnel, I personally feel this DREAM DIAGNOSTIC CENTRE is a boon Karkala. Best wishes and thanks for the management and staff.
+      </p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <!-- Anisha J Shetty -->
+    <div class="review-card">
+      <header>
+        <div class="placeholder-img">A</div>
+        <div>
+          <h4 style="color: white;">Axnisha j shetty</h4>
+          <time>1 month ago</time>
+        </div>
+      </header>
+      <p>
+        Many patients report positive experiences at medical labs, praising their staff’s professionalism, efficiency, and the quality of their services. Handling patients was too good 😊
+      </p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+  </div>
+
+  <a href="https://www.google.com/search?sca_esv=20a3364d895c8ae1&rlz=1C1VDKB_enIN1129IN1129&sxsrf=AE3TifP8cY4kd-r3qwHPcmt74d38Fe4gUQ:1752476814176&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E_t7R1erO1QOkbjxoRxcjYkI-VmvuaC9DVPVh_T6Sbed6MgP-qpl2RvssBQRKiX7SoQTcgX48TTy0vwsf0CNZRnrfHgiA6fRSGYReyASAvjE0AEYRg%3D%3D&q=Dream+Diagnostic+Centre+Reviews&sa=X&ved=2ahUKEwjqt_Hv5LuOAxWwSmwGHbG_Ad0Q0bkNegQIHhAD&biw=1536&bih=742&dpr=1.25#lrd=0x3bbb57c775ee14f3:0xfe08acd012da8f0b,3,,,," target="_blank" class="review-cta">
+    Review us on Google →
+  </a>
+</section>
+
+
+
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;max-width:1200px;margin:auto">
+      <!-- left -->
+      <div style="flex:1;min-width:250px;margin-bottom:20px">
+        <img src="d.jpg" alt="Dream Diagnostics Logo">
+        <p>Dream Diagnostic Centre is a modern healthcare diagnostics center providing quality and affordable services in Karkala. Our mission is to ensure timely, reliable and accurate diagnosis for everyone.</p>
+      </div>
+      <!-- middle -->
+      <div style="flex:1;min-width:150px;margin-bottom:20px">
+        <h3 style="margin-bottom:15px">Explore</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="#about">About Us</a></p>
+        <p><a href="services.html">Our Services</a></p>
+        <p><a href="contact.html">Contact Us</a></p>
+      </div>
+      <!-- right -->
+      <div style="flex:1;min-width:250px;margin-bottom:20px">
+        <h3 style="margin-bottom:15px">Get in Touch</h3>
+      <p>📞 <a href="tel:+918258200369">08258-200369</a> / <a href="tel:+918217797657">+91‑8217797657</a></p>
+
+
+        <p>📧 <a href="mailto:ddckarkala25@gmail.com">ddckarkala25@gmail.com</a></p>
+        <p>📍Karkala Inn,<br> Pulkeri Bypass Circle, Karkala 574114</p>
+        <div style="margin-top:20px">
+          <a href="https://www.instagram.com/_dreamdiagnosticcentre" target="_blank">
+            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram" style="background:#a64ca6;padding:10px;border-radius:8px">
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr style="border:0.5px solid #663399;max-width:1200px;margin:30px auto">
+    <p>&copy;  Dream Diagnostic Centre </p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a></p>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/918217797657" target="_blank" style="position:fixed;bottom:20px;right:20px;z-index:1000">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="width:60px;height:60px;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,.3)">
+  </a>
+
+  <!-- ========== slider script ========== -->
+<script>
+  let idx = 0;
+  const slides = document.querySelectorAll('.slide');
+  let autoSlideInterval;
+
+  function showSlide(n) {
+    slides.forEach((s) => s.classList.remove('active'));
+    idx = (n + slides.length) % slides.length;
+    slides[idx].classList.add('active');
+  }
+
+  function changeSlide(direction) {
+    showSlide(idx + direction);
+    resetAutoSlide();
+  }
+
+  function autoSlide() {
+    showSlide(idx + 1);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(autoSlide, 3000);
+  }
+
+  // Init
+  resetAutoSlide();
+</script>
+
+</body>
+</html> 

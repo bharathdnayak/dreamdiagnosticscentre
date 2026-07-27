@@ -1,0 +1,384 @@
+/* Glass Shader Refraction Playground Styles */
+.glass-demo-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0b0c10;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.demo-header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.demo-header h1 {
+  font-size: 26px;
+  color: #fff;
+  margin: 0;
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px !important;
+  font-size: 14px;
+}
+
+.demo-content-container {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 50px 20px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Canvas viewport */
+.canvas-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #000;
+}
+
+.canvas-wrapper canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+.canvas-wrapper canvas:active {
+  cursor: grabbing;
+}
+
+.drag-hint {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Replicating screenshot control panel */
+.control-panel-wrapper {
+  width: 100%;
+}
+
+.refraction-control-card {
+  background-color: #1e1f22;
+  border: 1px solid #2d2e32;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.header-badge-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdown-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2b2c30;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f3f4f6;
+  border: 1px solid #37383d;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-pill:hover {
+  background-color: #37383d;
+}
+
+.dot-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: #93c5fd;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #93c5fd;
+}
+
+.arrow-down {
+  color: #9ca3af;
+  font-size: 10px;
+}
+
+.beta-tag {
+  background-color: #2b2c30;
+  color: #93c5fd;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgba(147, 197, 253, 0.25);
+}
+
+.close-panel-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.close-panel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* Light Widget Controls */
+.light-setup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.setting-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.light-grid-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Joystick pad mapping */
+.light-pad {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  background: radial-gradient(circle, #2b2c30 30%, #1e1f22 100%);
+  border: 1.5px solid #2d2e32;
+  border-radius: 18px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.light-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #3b82f6;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+}
+
+.joystick-icon {
+  font-size: 16px;
+  opacity: 0.25;
+}
+
+.light-numerical-controls {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.numerical-value-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #2b2c30;
+  border: 1px solid #37383d;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.numerical-value-row .icon {
+  opacity: 0.6;
+}
+
+.numerical-input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  width: 40px;
+  outline: none;
+  text-align: right;
+}
+
+.numerical-value-row .suffix {
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.slider-input {
+  flex-grow: 1;
+  -webkit-appearance: none;
+  background: #37383d;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.label-val {
+  font-weight: 600;
+  color: #9ca3af;
+  font-size: 12px;
+  width: 32px;
+  text-align: right;
+}
+
+.divider-line {
+  border: 0;
+  height: 1px;
+  background-color: #2d2e32;
+  margin: 0 0 24px 0;
+}
+
+/* Sliders section */
+.sliders-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.control-slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slider-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.main-slider {
+  flex-grow: 1;
+  -webkit-appearance: none;
+  background: #2b2c30;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  overflow: hidden;
+  border: 1px solid #37383d;
+}
+
+/* Replicating the bright blue fill shown in user screenshot */
+.main-slider::-webkit-slider-runnable-track {
+  height: 6px;
+}
+
+.main-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #3b82f6;
+  box-shadow: -407px 0 0 400px #3b82f6; /* Left side fill blue track */
+  margin-top: -4px; /* Align vertical alignment */
+}
+
+.slider-value-display {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  width: 28px;
+  text-align: right;
+}
+
+/* Responsive grid layout queries */
+@media (max-width: 992px) {
+  .demo-content-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .glass-demo-page {
+    padding-top: 80px;
+  }
+  .demo-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .demo-header h1 {
+    font-size: 20px;
+  }
+  .refraction-control-card {
+    padding: 16px;
+  }
+}

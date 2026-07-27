@@ -1,0 +1,819 @@
+/* Aqua UI Global CSS System - Blue & White Theme */
+:root {
+  --primary: #004080;
+  --primary-dark: #002d5a;
+  --primary-light: #e6f0ff;
+  --secondary: #0059b3;
+  --accent: #ff6600;
+  --accent-hover: #e65c00;
+  --text-dark: #1a2530;
+  --text-medium: #4a5568;
+  --text-light: #718096;
+  --bg-light: #f4f8ff;
+  --bg-white: rgba(255, 255, 255, 0.7);
+  
+  --shadow-sm: 0 4px 6px rgba(0, 64, 128, 0.05);
+  --shadow-md: 0 10px 25px rgba(0, 64, 128, 0.08);
+  --shadow-lg: 0 20px 45px rgba(0, 64, 128, 0.12);
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  --transition-slow: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Dark Theme Overrides */
+.dark-theme {
+  --primary: #38bdf8;          /* Bright Cyan-Blue */
+  --primary-dark: #0284c7;
+  --primary-light: rgba(56, 189, 248, 0.12);
+  --secondary: #0ea5e9;
+  --accent: #ff6600;
+  --text-dark: #f8fafc;        /* Off-white */
+  --text-medium: #cbd5e1;      /* Slate Gray */
+  --text-light: #94a3b8;       /* Light Slate */
+  --bg-light: #0b1329;         /* Dark Navy background */
+  --bg-white: rgba(15, 23, 42, 0.85); /* Translucent dark slate card base */
+  
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.7);
+}
+
+.dark-theme html,
+.dark-theme body {
+  background-color: #0b1329 !important;
+  color: #f8fafc !important;
+}
+
+/* All Cards in Dark Theme: Deep Dark Slate Glass Panels */
+.dark-theme .glass-card, 
+.dark-theme .hero-cta-card, 
+.dark-theme .about-intro-card, 
+.dark-theme .mv-card, 
+.dark-theme .value-card, 
+.dark-theme .review-card, 
+.dark-theme .service-card, 
+.dark-theme .package-card, 
+.dark-theme .contact-info-card, 
+.dark-theme .appointment-info-card, 
+.dark-theme .appointment-form-card,
+.dark-theme .booking-success-message,
+.dark-theme .collection-card-wrapper,
+.dark-theme .guidelines-card,
+.dark-theme .faq-item,
+.dark-theme .details-modal,
+.dark-theme .receipt-box,
+.dark-theme .no-results-card,
+.dark-theme .search-filter-wrapper,
+.dark-theme .banner-card,
+.dark-theme .tech-card {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: url(#liquid-refraction) blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.12) !important;
+  color: #f8fafc !important;
+}
+
+/* Subtle gloss sheen overlay in dark theme */
+.dark-theme .glass-card::before, 
+.dark-theme .hero-cta-card::before, 
+.dark-theme .about-intro-card::before, 
+.dark-theme .mv-card::before, 
+.dark-theme .value-card::before, 
+.dark-theme .review-card::before, 
+.dark-theme .service-card::before, 
+.dark-theme .package-card::before, 
+.dark-theme .contact-info-card::before, 
+.dark-theme .appointment-info-card::before, 
+.dark-theme .appointment-form-card::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 100%) !important;
+}
+
+.dark-theme .main-header {
+  background: rgba(11, 19, 41, 0.88);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .main-header.scrolled {
+  background: rgba(7, 12, 26, 0.95);
+}
+
+.dark-theme .main-footer {
+  background: rgba(11, 19, 41, 0.88);
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .footer-bottom {
+  background-color: rgba(7, 12, 26, 0.7);
+}
+
+.dark-theme .bubble {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.25),
+              0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Inputs & Form Controls in Dark Theme */
+.dark-theme input, 
+.dark-theme select, 
+.dark-theme textarea {
+  background: rgba(8, 14, 28, 0.75) !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.dark-theme select option {
+  background-color: #0b1329 !important;
+  color: #f8fafc !important;
+}
+
+.dark-theme .form-icon,
+.dark-theme .search-icon {
+  color: #94a3b8 !important;
+}
+
+/* Badges & Tags in Dark Theme */
+.dark-theme .badge, 
+.dark-theme .collection-badge, 
+.dark-theme .modal-category-badge {
+  color: #38bdf8 !important;
+  background: rgba(56, 189, 248, 0.15) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+
+.dark-theme .step-tag.fasting {
+  background: rgba(255, 85, 0, 0.2) !important;
+  color: #ff8533 !important;
+}
+.dark-theme .step-tag.meds {
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #38bdf8 !important;
+}
+.dark-theme .step-tag.urine {
+  background: rgba(37, 211, 102, 0.2) !important;
+  color: #4ade80 !important;
+}
+
+/* Headings & Text Colors in Dark Theme */
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3, 
+.dark-theme h4 {
+  color: #f8fafc !important;
+}
+
+.dark-theme .hero-cta-info h2,
+.dark-theme .collection-info-panel h2,
+.dark-theme .guidelines-card h3,
+.dark-theme .faq-trigger span,
+.dark-theme .contact-info-column h2,
+.dark-theme .services-intro-section h2,
+.dark-theme .service-card h3,
+.dark-theme .mv-card h3,
+.dark-theme .values-section h2,
+.dark-theme .banner-text h3,
+.dark-theme .guidelines-list h4 {
+  color: #f8fafc !important;
+}
+
+.dark-theme p,
+.dark-theme .hero-cta-info p,
+.dark-theme .collection-info-panel p,
+.dark-theme .guidelines-steps p,
+.dark-theme .faq-content p,
+.dark-theme .review-text,
+.dark-theme .pkg-test-count,
+.dark-theme .service-card p,
+.dark-theme .guidelines-list p,
+.dark-theme .contact-intro-text,
+.dark-theme .mv-card p,
+.dark-theme .value-card p,
+.dark-theme .tech-card p,
+.dark-theme .modal-subtitle,
+.dark-theme .modal-tests-grid li span,
+.dark-theme .no-results-card p {
+  color: #cbd5e1 !important;
+}
+
+.dark-theme .about-more-link {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.4) !important;
+}
+.dark-theme .about-more-link:hover {
+  color: #ff8533 !important;
+  border-bottom-color: #ff8533 !important;
+}
+
+.dark-theme .reviews-section {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark-theme .quote-icon {
+  color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.dark-theme .search-bar {
+  background-color: rgba(8, 14, 28, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.dark-theme .filter-btn {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  color: #cbd5e1 !important;
+}
+.dark-theme .filter-btn.active {
+  background-color: #0ea5e9 !important;
+  color: #ffffff !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-main);
+  background-color: #f4f8ff;
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Dynamic light caustics and soft underwater refractions (shallow clear water style) */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%; left: -20%; width: 140%; height: 140%;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(0, 128, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 65%, rgba(34, 211, 238, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -2;
+  animation: liquidCaustics 14s infinite alternate ease-in-out;
+}
+
+@keyframes liquidCaustics {
+  0% { transform: scale(1) translate(0px, 0px) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.1) translate(30px, -20px) rotate(2deg); opacity: 0.95; }
+  100% { transform: scale(1) translate(-20px, 20px) rotate(-2deg); opacity: 0.8; }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Aqua Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 64, 128, 0.03);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 64, 128, 0.15);
+  border: 2.5px solid #f4f8ff;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 64, 128, 0.3);
+}
+
+/* Headings: Deep primary blue color */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-medium);
+}
+
+strong {
+  color: var(--text-dark);
+}
+
+/* Polished/Curved Frosted Glass Panel (Aqua UI Material - Light Mode) */
+.glass-card, 
+.hero-cta-card, 
+.about-intro-card, 
+.mv-card, 
+.value-card, 
+.review-card, 
+.service-card, 
+.package-card, 
+.contact-info-card, 
+.appointment-info-card, 
+.appointment-form-card,
+.booking-success-message {
+  background: rgba(255, 255, 255, 0.6) !important;
+  /* Apply refraction displacement filter + glass blur to the background stripes */
+  backdrop-filter: url(#liquid-refraction) blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  /* Stronger white border overlay for specular gel shine */
+  border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+  /* Smooth "iPhone" rounded corners */
+  border-radius: 24px !important;
+  /* Chromatic aberration edge refraction offsets (red/cyan) + specular highlight */
+  box-shadow: inset 0 16px 20px rgba(255, 255, 255, 0.45),
+              inset 0 -8px 12px rgba(0, 64, 128, 0.02),
+              -2.5px -2px 6px rgba(255, 60, 0, 0.12),
+              2.5px 2px 6px rgba(0, 200, 255, 0.16),
+              0 10px 30px rgba(0, 64, 128, 0.06) !important;
+  color: var(--text-dark) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.5s ease, 
+              box-shadow 0.5s ease !important;
+}
+
+/* Half-pane reflection gloss sheen overlay on glass elements */
+.glass-card::before, 
+.hero-cta-card::before, 
+.about-intro-card::before, 
+.mv-card::before, 
+.value-card::before, 
+.review-card::before, 
+.service-card::before, 
+.package-card::before, 
+.contact-info-card::before, 
+.appointment-info-card::before, 
+.appointment-form-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Cards Hover states: springy elevation + internal reflection highlight */
+.glass-card:hover, 
+.hero-cta-card:hover, 
+.about-intro-card:hover, 
+.mv-card:hover, 
+.value-card:hover, 
+.review-card:hover, 
+.service-card:hover, 
+.package-card:hover, 
+.contact-info-card:hover,
+.appointment-info-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 128, 255, 0.35) !important;
+  box-shadow: inset 0 16px 20px rgba(255, 255, 255, 0.5),
+              0 15px 35px rgba(0, 64, 128, 0.12) !important;
+}
+
+/* Translucent Glass Text colors */
+.about-intro-text p,
+.mv-card p,
+.value-card p,
+.review-text,
+.service-info p,
+.tests-list-wrapper li,
+.contact-intro-text,
+.guidelines-list p,
+.appointment-form label {
+  color: var(--text-medium) !important;
+}
+
+/* Submerged displacement filter styling */
+.submerged-image {
+  filter: url(#liquid-refraction);
+}
+
+.submerged-image-container img {
+  filter: url(#liquid-refraction);
+  transition: var(--transition-slow);
+}
+
+.submerged-image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Form input bubbles: translucent gel look (white theme) */
+.appointment-form input[type="text"],
+.appointment-form input[type="email"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="date"],
+.appointment-form select,
+.appointment-form textarea,
+.search-bar input {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1.5px solid rgba(0, 64, 128, 0.12) !important;
+  color: var(--text-dark) !important;
+  border-radius: 12px !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  transition: var(--transition-smooth);
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus,
+.search-bar:focus-within {
+  border-color: var(--primary) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),
+              0 0 0 3px rgba(0, 64, 128, 0.15) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.appointment-form input[readonly] {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  color: var(--text-light) !important;
+  border-color: rgba(0, 0, 0, 0.05) !important;
+  cursor: not-allowed;
+}
+
+/* Floating Bubbles Background */
+.bubble-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -40px;
+  background: radial-gradient(circle at 35% 35%, rgba(0, 128, 255, 0.08) 0%, rgba(0, 128, 255, 0.02) 70%);
+  border: 1px solid rgba(0, 128, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatBubble 10s infinite linear;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  top: 15%; left: 15%;
+  width: 25%; height: 15%;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.75;
+  }
+  90% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(40px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Standard Buttons: Polymer Gel droplets style */
+.btn-primary,
+.spotlight-btn,
+.pkg-book-btn,
+.service-book-btn,
+.form-submit-btn,
+.google-review-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px !important;
+  font-size: 14px;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ff8c1a 0%, #ff5500 50%, #cc3300 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  border-radius: 30px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.35),
+              inset 0 -5px 8px rgba(0, 0, 0, 0.25),
+              0 6px 16px rgba(255, 85, 0, 0.35) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary::before,
+.spotlight-btn::before,
+.pkg-book-btn::before,
+.service-book-btn::before,
+.form-submit-btn::before,
+.google-review-btn::before {
+  content: "";
+  position: absolute;
+  top: 4px; left: 15px; width: 10px; height: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.btn-primary:hover,
+.spotlight-btn:hover,
+.pkg-book-btn:hover,
+.service-book-btn:hover,
+.form-submit-btn:hover,
+.google-review-btn:hover {
+  animation: jellyStretch 0.65s ease;
+  background: linear-gradient(180deg, #ff9933 0%, #ff661a 50%, #e63d00 100%) !important;
+  box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.45),
+              0 8px 22px rgba(255, 85, 0, 0.5) !important;
+}
+
+/* Secondary Button: Blue Gel style */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px !important;
+  font-size: 14px;
+  text-decoration: none;
+  background: linear-gradient(180deg, #3399ff 0%, #0066cc 50%, #004d99 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  border-radius: 30px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.3),
+              inset 0 -5px 8px rgba(0, 0, 0, 0.25),
+              0 6px 16px rgba(0, 102, 204, 0.35) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary::before {
+  content: "";
+  position: absolute;
+  top: 4px; left: 15px; width: 10px; height: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.btn-secondary:hover {
+  animation: jellyStretch 0.65s ease;
+  background: linear-gradient(180deg, #4da6ff 0%, #0077ee 50%, #0055b3 100%) !important;
+  box-shadow: inset 0 10px 10px rgba(255, 255, 255, 0.4),
+              0 8px 22px rgba(0, 102, 204, 0.5) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Global Utility Classes */
+.animate-fade {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.section-padding {
+  padding: 80px 20px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 50px 15px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Athenahealth-style Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+/* Staggered Delay classes */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Triggers when IntersectionObserver adds 'is-visible' class */
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1) !important;
+}
+
+/* ==========================================================================
+   Apple / iOS Liquid Glass 3D Mouse Tilt & Specular Shine System
+   ========================================================================== */
+
+/* 1. Base 3D Perspective transforms for cards, logo, navs & buttons */
+.glass-card, 
+.hero-cta-card, 
+.about-intro-card, 
+.mv-card, 
+.value-card, 
+.review-card, 
+.service-card, 
+.package-card, 
+.contact-info-card, 
+.appointment-info-card, 
+.appointment-form-card,
+.booking-success-message,
+.btn-primary,
+.btn-secondary,
+.book-now-btn,
+.logo-title,
+.nav-link {
+  transform: translateY(var(--hover-y, 0px));
+  /* Smooth transform transitions for hover lifts */
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease !important;
+  will-change: transform;
+}
+
+/* 2. Hover Elevation state variables */
+.glass-card:hover, 
+.hero-cta-card:hover, 
+.about-intro-card:hover, 
+.mv-card:hover, 
+.value-card:hover, 
+.review-card:hover, 
+.service-card:hover, 
+.package-card:hover, 
+.contact-info-card:hover,
+.appointment-info-card:hover {
+  --hover-y: -8px;
+  border-color: rgba(0, 128, 255, 0.42) !important;
+  box-shadow: inset 0 16px 20px rgba(255, 255, 255, 0.5),
+              0 15px 35px rgba(0, 64, 128, 0.12) !important;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.book-now-btn:hover,
+.logo-title:hover {
+  --hover-y: -3px;
+}
+
+/* 3. Specular reflection highlight shine layer (follows mouse position) */
+.glass-card::after, 
+.hero-cta-card::after, 
+.about-intro-card::after, 
+.mv-card::after, 
+.value-card::after, 
+.review-card::after, 
+.service-card::after, 
+.package-card::after, 
+.contact-info-card::after, 
+.appointment-info-card::after, 
+.appointment-form-card::after,
+.btn-primary::after,
+.btn-secondary::after,
+.book-now-btn::after,
+.logo-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Specular radial shine centered at mouse position */
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.35) 0%, transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Make specular shine visible on hover */
+.glass-card:hover::after, 
+.hero-cta-card:hover::after, 
+.about-intro-card:hover::after, 
+.mv-card:hover::after, 
+.value-card:hover::after, 
+.review-card:hover::after, 
+.service-card:hover::after, 
+.package-card:hover::after, 
+.contact-info-card:hover::after, 
+.appointment-info-card:hover::after, 
+.appointment-form-card:hover::after,
+.btn-primary:hover::after,
+.btn-secondary:hover::after,
+.book-now-btn:hover::after,
+.logo-title:hover::after {
+  opacity: 1;
+}
+
+/* Fix header text contrast inside hero banners to be crisp, readable white */
+.packages-hero h1,
+.about-hero h1,
+.services-hero h1,
+.appointment-hero h1,
+.contact-hero h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.25) !important;
+}
