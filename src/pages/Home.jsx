@@ -73,7 +73,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "How do I schedule a home sample collection?",
-    a: "You can book directly by calling us at 08258-200369 or messaging our booking coordinator on WhatsApp at +91-8217797657. Please specify your location, requested date/time, and doctor's prescription if any."
+    a: "You can book directly by calling us at +91-8217797657 or messaging our booking coordinator on WhatsApp. Please specify your location, requested date/time, and doctor's prescription if any."
   },
   {
     q: "Are diagnostic reports from Dream Diagnostic Centre calibrated?",

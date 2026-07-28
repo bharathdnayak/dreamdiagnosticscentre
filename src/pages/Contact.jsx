@@ -4,7 +4,6 @@ import './Contact.css';
 
 export default function Contact() {
   const PHONES = [
-    { label: 'Landline', num: '08258-200369', link: 'tel:+918258200369' },
     { label: 'Mobile (Primary)', num: '8217797657', link: 'tel:+918217797657' },
     { label: 'Mobile (Support)', num: '7483902173', link: 'tel:+917483902173' },
     { label: 'Mobile (Emergency)', num: '6362651711', link: 'tel:+916362651711' }
