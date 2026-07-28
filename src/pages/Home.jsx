@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Star, Heart, ArrowRight, Quote, ShieldCheck, MapPin, Award, Users } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Heart, ArrowRight, Quote, ShieldCheck, MapPin, Award, Users, Clock } from 'lucide-react';
 import './Home.css';
 
 const SLIDES = [
@@ -189,10 +189,10 @@ export default function Home() {
             </div>
             <div className="stat-box">
               <div className="stat-icon-wrapper">
-                <MapPin size={24} className="stat-icon" />
+                <Clock size={24} className="stat-icon" />
               </div>
-              <span className="stat-number">8+</span>
-              <span className="stat-label">Surrounding Villages</span>
+              <span className="stat-number">Same Day</span>
+              <span className="stat-label">Report Delivery</span>
             </div>
           </div>
         </div>
