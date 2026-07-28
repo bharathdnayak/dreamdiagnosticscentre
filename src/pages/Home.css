@@ -727,6 +727,379 @@
   max-height: 200px; /* Expands open container */
 }
 
+/* -------------------------------------------------------------
+   2000+ TRUSTED PATIENTS SPOTLIGHT BANNER
+------------------------------------------------------------- */
+.trusted-spotlight-section {
+  padding: 40px 20px 20px 20px;
+}
+
+.trusted-spotlight-card {
+  padding: 40px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(0, 50, 100, 0.88) 0%, rgba(0, 30, 75, 0.92) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3),
+              0 15px 40px rgba(0, 30, 60, 0.25);
+  color: #ffffff;
+}
+
+.dark-theme .trusted-spotlight-card {
+  background: linear-gradient(135deg, rgba(11, 19, 41, 0.95) 0%, rgba(7, 12, 26, 0.98) 100%) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+.trusted-badge-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 16px;
+}
+
+.trusted-live-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulseGlow 1.8s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.trusted-tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+
+.trusted-spotlight-card h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.trusted-spotlight-card p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: 850px;
+  margin-bottom: 30px;
+}
+
+.trusted-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px 16px;
+  border-radius: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.stat-icon-wrapper {
+  background: rgba(255, 255, 255, 0.12);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #38bdf8;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+  font-size: 26px;
+  font-weight: 800;
+  color: #38bdf8;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* -------------------------------------------------------------
+   PRESCRIPTION UPLOAD & WHATSAPP PHOTO BANNER
+------------------------------------------------------------- */
+.prescription-banner-section {
+  padding: 20px;
+}
+
+.prescription-card {
+  padding: 32px 40px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 120, 0, 0.12) 0%, rgba(0, 64, 128, 0.1) 100%);
+  border: 1.5px solid rgba(255, 102, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.dark-theme .prescription-card {
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.15) 0%, rgba(15, 23, 42, 0.85) 100%) !important;
+  border-color: rgba(255, 102, 0, 0.35) !important;
+}
+
+.prescription-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ff6600;
+  background: rgba(255, 102, 0, 0.12);
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.prescription-content h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.dark-theme .prescription-content h3 {
+  color: #f8fafc !important;
+}
+
+.prescription-content p {
+  font-size: 14px;
+  color: var(--text-medium);
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+.dark-theme .prescription-content p {
+  color: #cbd5e1 !important;
+}
+
+.prescription-wa-btn {
+  white-space: nowrap;
+  padding: 14px 28px !important;
+  font-size: 14px !important;
+}
+
+/* -------------------------------------------------------------
+   KARKALA VILLAGES & LOCAL COVERAGE LIST
+------------------------------------------------------------- */
+.coverage-locations-box {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(0, 64, 128, 0.05);
+  border-radius: 14px;
+  border: 1px solid rgba(0, 64, 128, 0.12);
+}
+
+.dark-theme .coverage-locations-box {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.coverage-locations-box h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dark-theme .coverage-locations-box h4 {
+  color: #38bdf8 !important;
+}
+
+.location-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.loc-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 64, 128, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.dark-theme .loc-tag {
+  color: #f8fafc !important;
+  background: rgba(15, 23, 42, 0.7) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* -------------------------------------------------------------
+   GET REPORT ON WHATSAPP SHORTCUT BOX
+------------------------------------------------------------- */
+.get-report-section {
+  padding: 20px;
+}
+
+.get-report-card {
+  padding: 32px 40px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(0, 64, 128, 0.12) 0%, rgba(37, 211, 102, 0.08) 100%);
+  border: 1.5px solid rgba(37, 211, 102, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.dark-theme .get-report-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(37, 211, 102, 0.1) 100%) !important;
+  border-color: rgba(37, 211, 102, 0.35) !important;
+}
+
+.get-report-text h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.dark-theme .get-report-text h3 {
+  color: #f8fafc !important;
+}
+
+.report-icon {
+  color: #25d366;
+}
+
+.get-report-text p {
+  font-size: 14px;
+  color: var(--text-medium);
+  max-width: 550px;
+}
+
+.dark-theme .get-report-text p {
+  color: #cbd5e1 !important;
+}
+
+.get-report-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.report-input {
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  outline: none;
+  width: 220px;
+}
+
+.dark-theme .report-input {
+  background: rgba(8, 14, 28, 0.75) !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.report-btn {
+  padding: 12px 24px !important;
+  font-size: 13.5px !important;
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES FOR NEW HOME COMPONENTS
+------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .trusted-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prescription-card,
+  .get-report-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  .get-report-form {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .report-input {
+    width: 100%;
+  }
+  .report-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .trusted-spotlight-card {
+    padding: 24px 20px;
+  }
+  .trusted-spotlight-card h2 {
+    font-size: 22px;
+  }
+  .trusted-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .stat-box {
+    padding: 14px 10px;
+  }
+  .stat-number {
+    font-size: 20px;
+  }
+  .prescription-content h3 {
+    font-size: 18px;
+  }
+  .prescription-wa-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* --- Media Queries --- */
 @media (max-width: 992px) {
   /* FAQ responsive */
