@@ -160,7 +160,7 @@ export default function Home() {
             <span className="trusted-live-pulse"></span>
             <span className="trusted-tag">LOCAL COMMUNITY SPOTLIGHT</span>
           </div>
-          <h2>Trusted by 2,000+ Patients in Karkala</h2>
+          <h2>Trusted by 2,000+ Patients</h2>
           <p>
             Delivering 100% accurate lab test results, automated analyzer precision, and compassionate diagnostic care to families across Karkala and nearby regions.
           </p>
@@ -233,7 +233,7 @@ export default function Home() {
         <div className="collection-card-wrapper glass-card">
           <div className="collection-info-panel">
             <span className="collection-badge">Home Care Convenience</span>
-            <h2>Home Sample Collection in Karkala</h2>
+            <h2>Home Sample Collection</h2>
             <p>
               Skip the travel and waiting lines! Our certified phlebotomists will visit your home or office in Karkala to collect your blood/urine samples with complete safety, sterile comfort, and strict hygiene protocols.
             </p>
