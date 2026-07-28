@@ -737,11 +737,11 @@
 .trusted-spotlight-card {
   padding: 40px;
   border-radius: 24px;
-  background: linear-gradient(135deg, rgba(0, 50, 100, 0.88) 0%, rgba(0, 30, 75, 0.92) 100%);
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, #002d5a 0%, #004080 50%, #001f3f 100%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3),
-              0 15px 40px rgba(0, 30, 60, 0.25);
-  color: #ffffff;
+              0 15px 40px rgba(0, 30, 60, 0.25) !important;
+  color: #ffffff !important;
 }
 
 .dark-theme .trusted-spotlight-card {
@@ -754,10 +754,10 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   padding: 6px 14px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   margin-bottom: 16px;
 }
 
@@ -789,12 +789,12 @@
   font-weight: 800;
   margin-bottom: 12px;
   letter-spacing: -0.5px;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .trusted-spotlight-card p {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9) !important;
   line-height: 1.6;
   max-width: 850px;
   margin-bottom: 30px;

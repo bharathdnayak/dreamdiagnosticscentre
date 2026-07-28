@@ -155,7 +155,7 @@ export default function Home() {
 
       {/* 2000+ Trusted Customers Spotlight Banner */}
       <section className="trusted-spotlight-section container reveal">
-        <div className="trusted-spotlight-card glass-card">
+        <div className="trusted-spotlight-card">
           <div className="trusted-badge-header">
             <span className="trusted-live-pulse"></span>
             <span className="trusted-tag">LOCAL COMMUNITY SPOTLIGHT</span>
