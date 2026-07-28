@@ -38,6 +38,10 @@ export default function Footer() {
               <Phone size={18} className="contact-icon" />
               <div className="contact-details">
                 <a href="tel:+918217797657">+91-8217797657</a>
+                <span className="separator">/</span>
+                <a href="tel:+916362651711">+91-6362651711</a>
+                <span className="separator">/</span>
+                <a href="tel:+917483902173">+91-7483902173</a>
               </div>
             </li>
             <li>
