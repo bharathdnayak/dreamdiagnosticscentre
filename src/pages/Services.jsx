@@ -44,7 +44,7 @@ const SERVICES = [
     title: 'Weight',
     image: '/w.jpg',
     param: 'Weight',
-    desc: 'Precise weight tracking, helping patients monitor fitness goals, drug dosages, and overall metabolism.'
+    desc: 'Precise weight tracking, helping customers monitor fitness goals, drug dosages, and overall metabolism.'
   }
 ];
 
@@ -61,7 +61,7 @@ export default function Services() {
       <section className="services-hero">
         <div className="container">
           <h1>Our Diagnostic Facilities</h1>
-          <p className="services-hero-sub">State-of-the-art diagnostics and patient care services in Karkala.</p>
+          <p className="services-hero-sub">State-of-the-art diagnostics and customer care services in Karkala.</p>
         </div>
       </section>
 

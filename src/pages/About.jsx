@@ -5,8 +5,8 @@ import './About.css';
 export default function About() {
   const VALUES = [
     {
-      title: 'Patient-Centric Care',
-      desc: 'Prioritizing the health, comfort, and well-being of every patient through personalized attention and compassionate service.',
+      title: 'Customer-Centric Care',
+      desc: 'Prioritizing the health, comfort, and well-being of every customer through personalized attention and compassionate service.',
       icon: <Heart className="value-icon-svg" />
     },
     {
@@ -45,7 +45,7 @@ export default function About() {
               At <strong>Dream Diagnostic Centre</strong>, we believe <strong>health comes first</strong>. Established with the aim of providing affordable and accurate medical tests, we have built trust in the community by delivering quality care and reliable reports.
             </p>
             <p>
-              Located in <strong>Karkala, Karnataka</strong>, we offer a wide range of diagnostic services — from advanced imaging and pathology to routine health checkups. With modern infrastructure, cutting-edge technology, and an experienced team, we ensure timely and precise results for every patient.
+              Located in <strong>Karkala, Karnataka</strong>, we offer a wide range of diagnostic services — from advanced imaging and pathology to routine health checkups. With modern infrastructure, cutting-edge technology, and an experienced team, we ensure timely and precise results for every customer.
             </p>
           </div>
           <div className="about-intro-image reveal-right">
@@ -74,7 +74,7 @@ export default function About() {
               </div>
               <h3>Our Vision</h3>
               <p>
-                Our vision is to create a healthier society by emerging as a leader in affordable, reliable, and technology-driven diagnostic solutions, setting new benchmarks for accuracy and patient care.
+                Our vision is to create a healthier society by emerging as a leader in affordable, reliable, and technology-driven diagnostic solutions, setting new benchmarks for accuracy and customer care.
               </p>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function About() {
       <section className="values-section container">
         <div className="section-header-center reveal">
           <h2>Our Core Values</h2>
-          <p>The principles that guide our everyday diagnostics and patient care services</p>
+          <p>The principles that guide our everyday diagnostics and customer care services</p>
         </div>
         
         <div className="values-grid">

@@ -217,7 +217,7 @@ export default function Appointment() {
                     <span className="receipt-value ref-highlight">{bookingRef}</span>
                   </div>
                   <div className="receipt-row">
-                    <span className="receipt-label">Patient Name</span>
+                    <span className="receipt-label">Customer Name</span>
                     <span className="receipt-value">{submittedDetails.name}</span>
                   </div>
                   <div className="receipt-row">
@@ -242,7 +242,7 @@ export default function Appointment() {
                   <a 
                     href={`https://wa.me/918217797657?text=${encodeURIComponent(
                       `Hi Dream Diagnostics, I just submitted an online booking.\n\n` +
-                      `👤 Patient: ${submittedDetails.name}\n` +
+                      `👤 Customer: ${submittedDetails.name}\n` +
                       `📦 Screening: ${submittedDetails.appointment === 'Selected Package' ? submittedDetails.package : submittedDetails.appointment}\n` +
                       `📅 Date: ${submittedDetails.date}\n` +
                       `⏰ Time: ${submittedDetails.time}\n` +

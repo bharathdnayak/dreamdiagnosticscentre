@@ -57,7 +57,7 @@ const REVIEWS = [
     name: 'Axnisha j shetty',
     initial: 'A',
     time: '1 month ago',
-    text: 'Many patients report positive experiences at medical labs, praising their staff’s professionalism, efficiency, and the quality of their services. Handling patients was too good 😊',
+    text: 'Many customers report positive experiences at medical labs, praising their staff’s professionalism, efficiency, and the quality of their services. Handling customers was too good 😊',
     stars: 5
   }
 ];
@@ -160,7 +160,7 @@ export default function Home() {
             <span className="trusted-live-pulse"></span>
             <span className="trusted-tag">LOCAL COMMUNITY SPOTLIGHT</span>
           </div>
-          <h2>Trusted by 2,000+ Patients</h2>
+          <h2>Trusted by 2,000+ Customers</h2>
           <p>
             Delivering 100% accurate lab test results, automated analyzer precision, and compassionate diagnostic care to families across Karkala and nearby regions.
           </p>
@@ -171,7 +171,7 @@ export default function Home() {
                 <Users size={24} className="stat-icon" />
               </div>
               <span className="stat-number">2,000+</span>
-              <span className="stat-label">Trusted Patients</span>
+              <span className="stat-label">Trusted Customers</span>
             </div>
             <div className="stat-box">
               <div className="stat-icon-wrapper">
@@ -299,7 +299,7 @@ export default function Home() {
       <section className="reviews-section">
         <div className="container">
           <h2>What Our Customers Are Saying</h2>
-          <p className="reviews-subtitle">Real experiences from patients who visited Dream Diagnostic Centre</p>
+          <p className="reviews-subtitle">Real experiences from customers who visited Dream Diagnostic Centre</p>
           
           <div className="reviews-grid">
             {REVIEWS.map((review, index) => (
@@ -338,7 +338,7 @@ export default function Home() {
       {/* Pre-Test Guidelines & FAQ Section */}
       <section className="faq-section container reveal">
         <h2>Guidelines & FAQs</h2>
-        <p className="faq-subtitle">Pre-test guidelines and general information for patients</p>
+        <p className="faq-subtitle">Pre-test guidelines and general information for customers</p>
         
         <div className="faq-wrapper">
           <div className="guidelines-card glass-card">
