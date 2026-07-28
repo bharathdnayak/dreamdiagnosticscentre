@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Star, Heart, ArrowRight, Quote, ShieldCheck, Camera, MapPin, MessageCircle, Award, Users, PhoneCall } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Heart, ArrowRight, Quote, ShieldCheck, MapPin, Award, Users } from 'lucide-react';
 import './Home.css';
 
 const SLIDES = [
@@ -198,31 +198,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick Prescription Upload Photo Banner */}
-      <section className="prescription-banner-section container reveal">
-        <div className="prescription-card glass-card">
-          <div className="prescription-content">
-            <span className="prescription-badge">
-              <Camera size={14} style={{ marginRight: '6px' }} /> Easy 1-Step Booking
-            </span>
-            <h3>Have a Doctor's Prescription Paper?</h3>
-            <p>
-              Don't worry about typing long test names! Simply take a photo of your doctor's handwritten prescription slip on your mobile phone and send it directly to our lab coordinator on WhatsApp for instant pricing & slot booking.
-            </p>
-          </div>
-          <div className="prescription-action">
-            <a
-              href="https://wa.me/918217797657?text=Hi%20Dream%20Diagnostics%2C%20I%20am%20sending%20a%20photo%20of%20my%20Doctor%27s%20Prescription%20slip%20for%20a%20test%20quote."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary prescription-wa-btn"
-            >
-              <Camera size={20} style={{ marginRight: '8px' }} /> Send Doctor's Slip Photo
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Hero CTA section */}
       <section className="hero-cta-section container reveal">
         <div className="hero-cta-card">
@@ -258,9 +233,9 @@ export default function Home() {
         <div className="collection-card-wrapper glass-card">
           <div className="collection-info-panel">
             <span className="collection-badge">Home Care Convenience</span>
-            <h2>Home Sample Collection in Karkala & Surrounding Areas</h2>
+            <h2>Home Sample Collection in Karkala</h2>
             <p>
-              Skip the travel and waiting lines! Our certified phlebotomists visit your home or office in Karkala and nearby villages with complete safety, sterile comfort, and strict hygiene protocols.
+              Skip the travel and waiting lines! Our certified phlebotomists will visit your home or office in Karkala to collect your blood/urine samples with complete safety, sterile comfort, and strict hygiene protocols.
             </p>
             <ul className="collection-features-list">
               <li>
@@ -273,24 +248,9 @@ export default function Home() {
               </li>
               <li>
                 <ShieldCheck size={18} className="feat-check" />
-                <span>Safe Temperature-controlled Sample Transport</span>
+                <span>Safe Temperature-controlled Transport</span>
               </li>
             </ul>
-
-            {/* Karkala Villages & Local Coverage List */}
-            <div className="coverage-locations-box">
-              <h4><MapPin size={15} style={{ marginRight: '6px' }} /> Doorstep Collection Covered In:</h4>
-              <div className="location-tags">
-                <span className="loc-tag">Karkala Town</span>
-                <span className="loc-tag">Nitte</span>
-                <span className="loc-tag">Belman</span>
-                <span className="loc-tag">Miyar</span>
-                <span className="loc-tag">Bajagoli</span>
-                <span className="loc-tag">Ajekar</span>
-                <span className="loc-tag">Moodbidri</span>
-                <span className="loc-tag">Mala</span>
-              </div>
-            </div>
 
             <div className="collection-action-row">
               <a 
@@ -302,41 +262,12 @@ export default function Home() {
                 Schedule Home Visit
               </a>
               <a href="tel:8217797657" className="btn-secondary call-btn">
-                <PhoneCall size={18} style={{ marginRight: '6px' }} /> Call +91 82177 97657
+                Call +91 82177 97657
               </a>
             </div>
           </div>
           <div className="collection-graphic-panel">
             <img src="/senior.jpg" alt="Home Sample Collection Service" />
-          </div>
-        </div>
-      </section>
-
-      {/* Get Report on WhatsApp Shortcut Box */}
-      <section className="get-report-section container reveal">
-        <div className="get-report-card glass-card">
-          <div className="get-report-text">
-            <h3><MessageCircle size={22} className="report-icon" /> Get Test Report Sent to WhatsApp</h3>
-            <p>Enter your patient mobile number or Reference ID to request your diagnostic report directly on WhatsApp.</p>
-          </div>
-          <div className="get-report-form">
-            <input
-              type="text"
-              placeholder="Enter Mobile No. / Ref ID"
-              value={reportQuery}
-              onChange={(e) => setReportQuery(e.target.value)}
-              className="report-input"
-            />
-            <a
-              href={`https://wa.me/918217797657?text=${encodeURIComponent(
-                `Hi Dream Diagnostics, please send my test report for Mobile/Ref ID: ${reportQuery || 'Not specified'}`
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary report-btn"
-            >
-              Request Report
-            </a>
           </div>
         </div>
       </section>
