@@ -127,7 +127,7 @@ export default function About() {
             <span className="tech-badge-tag imm">Immunoassay</span>
             <h3>CLIA Hormonal Testing Analyzer</h3>
             <p>
-              Leverages Chemiluminescence Immunoassay (CLIA) for thyroid panels, Vitamin B12, and Vitamin D3, achieving ultra-sensitive detection levels for absolute diagnostic confidence.
+              Leverages Chemiluminescence Immunoassay (CLIA) for Thyroid Panels, Vitamin B12, and Vitamin D3, achieving ultra-sensitive detection levels for absolute diagnostic confidence.
             </p>
           </div>
         </div>
