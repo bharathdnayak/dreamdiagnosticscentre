@@ -851,6 +851,14 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
+.stat-subnote {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 3px;
+  line-height: 1.2;
+}
+
 /* -------------------------------------------------------------
    PRESCRIPTION UPLOAD & WHATSAPP PHOTO BANNER
 ------------------------------------------------------------- */

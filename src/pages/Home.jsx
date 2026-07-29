@@ -193,6 +193,7 @@ export default function Home() {
               </div>
               <span className="stat-number">Same Day</span>
               <span className="stat-label">Report Delivery</span>
+              <span className="stat-subnote">*Except specialized tests</span>
             </div>
           </div>
         </div>
