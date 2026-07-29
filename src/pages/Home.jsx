@@ -235,7 +235,7 @@ export default function Home() {
             <span className="collection-badge">Home Care Convenience</span>
             <h2>Home Sample Collection</h2>
             <p>
-              Skip the travel and waiting lines! Our certified phlebotomists will visit your home or office in Karkala to collect your blood/urine samples with complete safety, sterile comfort, and strict hygiene protocols.
+              Skip the travel and waiting lines! Our certified phlebotomists will visit your home or office across Karkala and nearby regions to collect your blood/urine samples with complete safety, sterile comfort, and strict hygiene protocols.
             </p>
             <ul className="collection-features-list">
               <li>
