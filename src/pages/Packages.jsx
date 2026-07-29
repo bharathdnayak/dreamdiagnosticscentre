@@ -230,7 +230,7 @@ export default function Packages() {
         <div className="banner-card">
           <div className="banner-text">
             <h3>Need Home Sample Collection?</h3>
-            <p>Get tested from the comfort of your home. Contact us to schedule a home sample collection by our certified lab technicians in Karkala.</p>
+            <p>Get tested from the comfort of your home. Contact us to schedule a home sample collection by our certified lab technicians across Karkala & nearby regions.</p>
           </div>
           <a href="https://wa.me/918217797657?text=Hi%2C%20I%20want%20to%20book%20a%20home%20sample%20collection." target="_blank" rel="noopener noreferrer" className="btn-primary banner-whatsapp-btn">
             Contact on WhatsApp

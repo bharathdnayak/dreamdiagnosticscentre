@@ -26,7 +26,7 @@ export default function Contact() {
           <div className="contact-info-column">
             <h2>Get in Touch</h2>
             <p className="contact-intro-text">
-              Have questions about health packages or laboratory tests? Reach out to our consultants via phone or email, or visit our diagnostics center in Karkala.
+              Have questions about health packages or laboratory tests? Reach out to our consultants via phone or email, or visit our diagnostics center serving Karkala & nearby regions.
             </p>
 
             <div className="info-cards-stack">

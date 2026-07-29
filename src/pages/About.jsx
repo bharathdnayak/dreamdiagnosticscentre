@@ -32,7 +32,7 @@ export default function About() {
       <section className="about-hero">
         <div className="container">
           <h1>About Our Diagnostic Centre</h1>
-          <p className="about-hero-sub">Providing reliable diagnostics with speed, care, and precision in Karkala.</p>
+          <p className="about-hero-sub">Providing reliable diagnostics with speed, care, and precision across Karkala & nearby regions.</p>
         </div>
       </section>
 

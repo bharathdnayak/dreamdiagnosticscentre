@@ -205,7 +205,7 @@ export default function Home() {
           <div className="hero-cta-info">
             <span className="badge">Healthcare Diagnostics</span>
             <h2>Your Health, Our Priority</h2>
-            <p>Get accurate, reliable, and timely diagnostic results with our high-tech laboratory facilities in Karkala.</p>
+            <p>Get accurate, reliable, and timely diagnostic results with our high-tech laboratory facilities serving Karkala & nearby regions.</p>
           </div>
           <Link to="/appointment" className="btn-secondary">
             Book Appointment

@@ -14,7 +14,7 @@ export default function Footer() {
             <h3>Dream Diagnostic Centre</h3>
           </div>
           <p className="footer-desc">
-            Dream Diagnostic Centre is a modern healthcare diagnostics center providing quality and affordable services in Karkala. Our mission is to ensure timely, reliable, and accurate diagnosis for everyone.
+            Dream Diagnostic Centre is a modern healthcare diagnostics center providing quality and affordable services across Karkala & nearby regions. Our mission is to ensure timely, reliable, and accurate diagnosis for everyone.
           </p>
         </div>
 

@@ -61,7 +61,7 @@ export default function Services() {
       <section className="services-hero">
         <div className="container">
           <h1>Our Diagnostic Facilities</h1>
-          <p className="services-hero-sub">State-of-the-art diagnostics and customer care services in Karkala.</p>
+          <p className="services-hero-sub">State-of-the-art diagnostics and customer care services across Karkala & nearby regions.</p>
         </div>
       </section>
 
