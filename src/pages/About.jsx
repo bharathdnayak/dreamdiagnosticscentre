@@ -111,7 +111,7 @@ export default function About() {
             <span className="tech-badge-tag bio">Biochemistry</span>
             <h3>Fully Automated Biochemistry Analyzer</h3>
             <p>
-              Processes Blood Glucose Levels, Lipid Profiles, Liver Parameters (LFT), and Kidney Metrics (KFT) using spectrophotometric measurement and automated calibrations, eliminating manual errors.
+              Processes Blood Glucose Levels, Lipid Profiles, Liver Parameters (LFT), and Kidney / Renal Profile (KFT / RFT) using spectrophotometric measurement and automated calibrations, eliminating manual errors.
             </p>
           </div>
           
